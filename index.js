@@ -84,5 +84,16 @@ topMenuEl.addEventListener("click", (event) => {
 		});
 	} else {
 		subMenuEl.style.top = "0";
-		subMenuEl.innerHTML = ""; 
+		subMenuEl.innerHTML = "";
+	}
+});
+
+subMenuEl.addEventListener("click", (event) => {
+	event.preventDefault();
+	if (event.target.tagName !== "A") return;
+	console.log(event.target);
+	subMenuEl.style.top = "0";
+	const activeLink = document.querySelector(".active");
+	activeLink.classList.remove("active");
+	head.innerText = event.target.innerText;
 });
