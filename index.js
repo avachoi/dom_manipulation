@@ -74,10 +74,8 @@ topMenuEl.addEventListener("click", (event) => {
 
 	event.target.classList.toggle("active");
 	if (event.target.classList.contains("active") && event.target.subLinks) {
-		console.log("hello");
 		subMenuEl.style.top = "100%";
-		// Update subMenuEl with subLinks content
-		// subMenuEl.innerHTML = ""; // Clear previous sub-links
+
 		event.target.subLinks.forEach((subLink) => {
 			let subLinkEl = document.createElement("a");
 			subLinkEl.setAttribute("href", subLink.href);
@@ -86,6 +84,5 @@ topMenuEl.addEventListener("click", (event) => {
 		});
 	} else {
 		subMenuEl.style.top = "0";
-		subMenuEl.innerHTML = ""; // Clear sub-links when not active
-	}
+		subMenuEl.innerHTML = ""; 
 });
