@@ -73,6 +73,7 @@ topMenuEl.addEventListener("click", (event) => {
 	}
 
 	event.target.classList.toggle("active");
+	subMenuEl.innerHTML = "";
 	if (event.target.classList.contains("active") && event.target.subLinks) {
 		subMenuEl.style.top = "100%";
 
